@@ -1,1 +1,179 @@
-{\n  \"_readme\": [\n    \"This file controls how the Telegram capture bot routes messages.\",\n    \"Ask Claude to update any section. Changes take effect immediately - no code changes needed.\",\n    \"\",\n    \"ROUTING LOGIC:\",\n    \"  1. If the first 6 words contain a task_trigger -> goes to Monday Inbox as a task\",\n    \"  2. Everything else -> goes to Notion Ideas Inbox (default)\",\n    \"\",\n    \"TO ADD A NEW BUCKET: add an entry to the buckets array\",\n    \"TO ADD A TRIGGER WORD: add it to task_triggers\",\n    \"TO ADD A KEYWORD: add it to the relevant bucket keywords array\"\n  ],\n\n  \"task_triggers\": [\n    \"task\", \"todo\", \"to-do\", \"action\", \"remind\", \"reminder\",\n    \"add task\", \"do this\", \"don't forget\", \"remember to\"\n  ],\n\n  \"buckets\": [\n    {\n      \"_name\": \"Eberoth D&D Campaign\",\n      \"notion_tag\": \"Eberoth\",\n      \"keywords\": [\"eberoth\", \"dnd\", \"d&d\", \"campaign\", \"thorebe\", \"corvath\", \"dungeon\", \"players\", \"session\", \"house foss\", \"blood key\", \"baker\", \"byron holt\", \"dm\", \"dungeon master\", \"encounter\", \"quest\", \"npc\", \"lore\"]\n    },\n    {\n      \"_name\": \"Mechanical Engineering\",\n      \"notion_tag\": \"Engineering\",\n      \"keywords\": [\"engineering\", \"mech eng\", \"mechanical\", \"uni\", \"university\", \"bath\", \"design\", \"cad\", \"desk\", \"standing desk\", \"coursework\", \"lecture\", \"project\", \"encoder\", \"motor\", \"actuator\"]\n    },\n    {\n      \"_name\": \"Earthkeeper App\",\n      \"notion_tag\": \"Earthkeeper\",\n      \"keywords\": [\"earthkeeper\", \"clearing\", \"hospital\", \"hospice\", \"prison\", \"energy healing\", \"map\", \"github pages\", \"maplibre\", \"practitioners\"]\n    },\n    {\n      \"_name\": \"Healer / Energy Work\",\n      \"notion_tag\": \"Healer\",\n      \"keywords\": [\"healer\", \"vortex\", \"vortexhealing\", \"qi gong\", \"craniosacral\", \"healing\", \"anthony\", \"ric\", \"course\", \"class\", \"attunement\", \"energy work\"]\n    },\n    {\n      \"_name\": \"Organic Magic / Entrepreneurship\",\n      \"notion_tag\": \"Organic Magic\",\n      \"keywords\": [\"organic magic\", \"organic\", \"venture\", \"business\", \"entrepreneur\", \"startup\", \"product\", \"customers\", \"revenue\", \"market\"]\n    },\n    {\n      \"_name\": \"Personal Life\",\n      \"notion_tag\": \"Personal\",\n      \"keywords\": [\"personal\", \"finance\", \"landlord\", \"family\", \"health\", \"money\", \"rent\", \"flat\", \"relationship\", \"friend\", \"travel\", \"holiday\"]\n    },\n    {\n      \"_name\": \"Second Brain / System Building\",\n      \"notion_tag\": \"Second Brain\",\n      \"keywords\": [\"second brain\", \"system\", \"notion\", \"monday\", \"obsidian\", \"capture\", \"workflow\", \"telegram\", \"bot\", \"automation\", \"cloudflare\", \"worker\", \"routing\"]\n    },\n    {\n      \"_name\": \"Fun / Hobbies\",\n      \"notion_tag\": \"Fun\",\n      \"keywords\": [\"fun\", \"hobby\", \"music\", \"reading\", \"book\", \"film\", \"movie\", \"game\", \"hiking\", \"climbing\", \"sport\"]\n    }\n  ]\n}\n
+{
+  "_readme": [
+    "This file controls how the Telegram capture bot routes messages.",
+    "Ask Claude to update any section. Changes take effect immediately - no code changes needed.",
+    "",
+    "ROUTING LOGIC:",
+    "  1. If the first 6 words contain a task_trigger -> goes to Monday Inbox as a task",
+    "  2. Everything else -> goes to Notion Ideas Inbox (default)",
+    "",
+    "TO ADD A NEW BUCKET: add an entry to the buckets array",
+    "TO ADD A TRIGGER WORD: add it to task_triggers",
+    "TO ADD A KEYWORD: add it to the relevant bucket keywords array"
+  ],
+  "task_triggers": [
+    "task",
+    "todo",
+    "to-do",
+    "action",
+    "remind",
+    "reminder",
+    "add task",
+    "do this",
+    "don't forget",
+    "remember to"
+  ],
+  "buckets": [
+    {
+      "_name": "Eberoth D&D Campaign",
+      "notion_tag": "Eberoth",
+      "keywords": [
+        "eberoth",
+        "dnd",
+        "d&d",
+        "campaign",
+        "thorebe",
+        "corvath",
+        "dungeon",
+        "players",
+        "session",
+        "house foss",
+        "blood key",
+        "baker",
+        "byron holt",
+        "dm",
+        "dungeon master",
+        "encounter",
+        "quest",
+        "npc",
+        "lore"
+      ]
+    },
+    {
+      "_name": "Mechanical Engineering",
+      "notion_tag": "Engineering",
+      "keywords": [
+        "engineering",
+        "mech eng",
+        "mechanical",
+        "uni",
+        "university",
+        "bath",
+        "design",
+        "cad",
+        "desk",
+        "standing desk",
+        "coursework",
+        "lecture",
+        "project",
+        "encoder",
+        "motor",
+        "actuator"
+      ]
+    },
+    {
+      "_name": "Earthkeeper App",
+      "notion_tag": "Earthkeeper",
+      "keywords": [
+        "earthkeeper",
+        "clearing",
+        "hospital",
+        "hospice",
+        "prison",
+        "energy healing",
+        "map",
+        "github pages",
+        "maplibre",
+        "practitioners"
+      ]
+    },
+    {
+      "_name": "Healer / Energy Work",
+      "notion_tag": "Healer",
+      "keywords": [
+        "healer",
+        "vortex",
+        "vortexhealing",
+        "qi gong",
+        "craniosacral",
+        "healing",
+        "anthony",
+        "ric",
+        "course",
+        "class",
+        "attunement",
+        "energy work"
+      ]
+    },
+    {
+      "_name": "Organic Magic / Entrepreneurship",
+      "notion_tag": "Organic Magic",
+      "keywords": [
+        "organic magic",
+        "organic",
+        "venture",
+        "business",
+        "entrepreneur",
+        "startup",
+        "product",
+        "customers",
+        "revenue",
+        "market"
+      ]
+    },
+    {
+      "_name": "Personal Life",
+      "notion_tag": "Personal",
+      "keywords": [
+        "personal",
+        "finance",
+        "landlord",
+        "family",
+        "health",
+        "money",
+        "rent",
+        "flat",
+        "relationship",
+        "friend",
+        "travel",
+        "holiday"
+      ]
+    },
+    {
+      "_name": "Second Brain / System Building",
+      "notion_tag": "Second Brain",
+      "keywords": [
+        "second brain",
+        "system",
+        "notion",
+        "monday",
+        "obsidian",
+        "capture",
+        "workflow",
+        "telegram",
+        "bot",
+        "automation",
+        "cloudflare",
+        "worker",
+        "routing"
+      ]
+    },
+    {
+      "_name": "Fun / Hobbies",
+      "notion_tag": "Fun",
+      "keywords": [
+        "fun",
+        "hobby",
+        "music",
+        "reading",
+        "book",
+        "film",
+        "movie",
+        "game",
+        "hiking",
+        "climbing",
+        "sport"
+      ]
+    }
+  ]
+}
